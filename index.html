@@ -3,167 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPM DROP TAXI | Professional Taxi Service</title>
+    <title>SPM DROP TAXI | One Way & Round Trip Service</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKd7185pdh+djz+mglBkD7lIlDeyKSpbjNj934L8RzoP+g/ics2v9f9pgiymQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-        
         .hero-bg { 
-            background: linear-gradient(135deg, rgba(30,64,175,0.9) 0%, rgba(30,64,175,0.95) 100%), 
-                        url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1500&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%), 
+                        url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover; background-position: center;
         }
-        
-        input:focus {
-            outline: none;
-            border-color: #1e40af;
-            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
-        }
-
-        .icon {
-            display: inline-block;
-            width: 1.5em;
-            height: 1.5em;
-            vertical-align: middle;
-        }
+        .active-tab { border-bottom: 4px solid #fbbf24; color: #fbbf24; }
+        .inactive-tab { color: #94a3b8; }
+        .floating-btn { transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .floating-btn:hover { transform: scale(1.1); }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 font-sans">
 
-    <!-- Top Bar -->
-    <div class="bg-slate-900 text-white py-2 px-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
-            <div><i class="fas fa-phone icon text-amber-400 mr-2"></i> +91 8883348403</div>
-            <div class="hidden md:block">Professional Taxi Service</div>
-        </div>
+    <div class="bg-blue-900 text-white py-2 px-6 flex justify-between items-center text-xs md:text-sm font-medium">
+        <span><i class="fas fa-check-circle text-amber-400 mr-1"></i> Best Price Guaranteed</span>
+        <a href="tel:+918883348403" class="hover:text-amber-400 transition underline underline-offset-4 font-bold tracking-wider">
+            <i class="fas fa-phone-alt mr-1"></i> CALL: 88833 48403
+        </a>
     </div>
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold"><span class="text-blue-600">SPM</span> <span class="text-amber-400">DROP TAXI</span></h1>
-            <div class="space-x-4 hidden md:flex items-center">
-                <a href="#tariff" class="text-gray-700 hover:text-blue-600 font-medium">Tariff</a>
-                <a href="tel:+918883348403" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700">Book Now</a>
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="bg-blue-600 text-white p-2 rounded-lg font-black text-xl">SPM</span>
+                <span class="text-2xl font-black text-slate-800 tracking-tighter">DROP TAXI</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 font-bold text-slate-600 uppercase text-sm">
+                <a href="#tariff" class="hover:text-blue-600">Tariff</a>
+                <a href="https://wa.me/918883348403" class="hover:text-green-500">WhatsApp</a>
+                <a href="tel:+918883348403" class="bg-amber-400 text-slate-900 px-6 py-2 rounded-full shadow-md hover:bg-amber-500 transition">Book Now</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-bg py-20 px-4">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-            <div class="text-white">
-                <h2 class="text-5xl font-bold mb-4">Save 40% on One Way Drops</h2>
-                <p class="text-lg mb-6 opacity-90">Transparent pricing. No hidden charges. Professional drivers.</p>
-                <div class="text-4xl font-bold">₹14<span class="text-lg"> / km</span></div>
+    <section class="hero-bg py-16 md:py-28 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-white space-y-6">
+                <h2 class="text-5xl md:text-7xl font-black leading-tight">Pay only for <br><span class="text-amber-400">One Way!</span></h2>
+                <p class="text-xl opacity-90 leading-relaxed max-w-lg">Tamil Nadu's premium outstation taxi service. Clean cars, professional drivers, and 100% transparent pricing.</p>
+                <div class="flex space-x-4">
+                    <div class="bg-white/10 backdrop-blur p-4 rounded-xl border border-white/20">
+                        <p class="text-3xl font-bold">₹14</p>
+                        <p class="text-xs uppercase font-bold text-amber-400 tracking-widest">Sedan / KM</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur p-4 rounded-xl border border-white/20">
+                        <p class="text-3xl font-bold">₹18</p>
+                        <p class="text-xs uppercase font-bold text-amber-400 tracking-widest">SUV / KM</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="bg-white p-8 rounded-lg shadow-lg">
-                <div class="flex border-b mb-6">
-                    <button class="pb-2 px-4 border-b-2 border-blue-600 font-bold">One Way</button>
-                    <button class="pb-2 px-4 text-gray-500 font-bold">Round Trip</button>
+            <div class="bg-white rounded-3xl shadow-2xl p-8 overflow-hidden">
+                <div class="flex mb-8 border-b">
+                    <button id="oneWayBtn" onclick="switchTab('oneway')" class="flex-1 pb-4 text-sm font-black uppercase tracking-widest active-tab">One Way</button>
+                    <button id="roundTripBtn" onclick="switchTab('roundtrip')" class="flex-1 pb-4 text-sm font-black uppercase tracking-widest inactive-tab">Round Trip</button>
                 </div>
-                <form class="space-y-4">
-                    <input type="text" placeholder="From City" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-600">
-                    <input type="text" placeholder="To City" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-600">
-                    <input type="tel" placeholder="Phone Number" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-600">
-                    <button type="button" class="w-full bg-amber-400 text-slate-900 font-bold py-3 rounded-lg hover:bg-amber-500">Get Quote</button>
+
+                <form class="space-y-5">
+                    <div class="relative group">
+                        <i class="fas fa-map-marker-alt absolute left-4 top-4 text-blue-500 group-focus-within:text-amber-500 transition"></i>
+                        <input type="text" placeholder="Pickup City" class="w-full bg-slate-50 border border-slate-200 p-4 pl-12 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none transition">
+                    </div>
+                    <div class="relative group">
+                        <i class="fas fa-route absolute left-4 top-4 text-blue-500"></i>
+                        <input type="text" placeholder="Destination City" class="w-full bg-slate-50 border border-slate-200 p-4 pl-12 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none transition">
+                    </div>
+                    <div id="dateField" class="hidden relative group">
+                        <i class="fas fa-calendar-day absolute left-4 top-4 text-blue-500"></i>
+                        <input type="date" class="w-full bg-slate-50 border border-slate-200 p-4 pl-12 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none transition">
+                    </div>
+                    <div class="relative group">
+                        <i class="fas fa-phone-alt absolute left-4 top-4 text-blue-500"></i>
+                        <input type="tel" placeholder="Mobile Number" class="w-full bg-slate-50 border border-slate-200 p-4 pl-12 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none transition">
+                    </div>
+                    <button type="submit" id="submitBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-5 rounded-xl text-lg uppercase shadow-xl transition-all hover:scale-[1.02] active:scale-95">
+                        Calculate One Way Quote
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Table -->
-    <section id="tariff" class="py-16 bg-white px-4">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold mb-2 text-center">Pricing</h2>
-            <p class="text-gray-600 text-center mb-8">Inclusive of GST | Toll & State Permit Extra</p>
-            
-            <table class="w-full border-collapse">
-                <thead>
-                    <tr class="bg-gray-100 border-b-2 border-blue-600">
-                        <th class="p-4 text-left font-bold">Vehicle</th>
-                        <th class="p-4 text-left font-bold">One Way</th>
-                        <th class="p-4 text-left font-bold">Round Trip</th>
-                        <th class="p-4 text-left font-bold">Charge</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y">
-                    <tr class="hover:bg-gray-50">
-                        <td class="p-4"><strong>Sedan</strong><br><span class="text-gray-500 text-sm">(Etios, Dzire)</span></td>
-                        <td class="p-4 text-blue-600 font-bold">₹14 / km</td>
-                        <td class="p-4">₹12 / km</td>
-                        <td class="p-4">₹400</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="p-4"><strong>MUV</strong><br><span class="text-gray-500 text-sm">(Ertiga, Xylo)</span></td>
-                        <td class="p-4 text-blue-600 font-bold">₹18 / km</td>
-                        <td class="p-4">₹16 / km</td>
-                        <td class="p-4">₹400</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="p-4"><strong>Innova</strong><br><span class="text-gray-500 text-sm">(Standard/Crysta)</span></td>
-                        <td class="p-4 text-blue-600 font-bold">₹19 / km</td>
-                        <td class="p-4">₹16 / km</td>
-                        <td class="p-4">₹400</td>
-                    </tr>
-                </tbody>
-            </table>
+    <section id="tariff" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-black text-slate-800 uppercase tracking-tighter">Our Simple Pricing</h3>
+                <div class="h-1 w-24 bg-amber-400 mx-auto mt-4 rounded-full"></div>
+            </div>
 
-            <div class="mt-8 grid md:grid-cols-2 gap-6 text-sm">
-                <div class="bg-gray-50 p-4 rounded">
-                    <strong>One Way</strong>
-                    <ul class="mt-2 space-y-1 text-gray-700">
-                        <li>• Minimum 130 Kms</li>
-                        <li>• Extra Charge: ₹600 (if exceeds 400 kms)</li>
-                    </ul>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-b-8 border-amber-400 hover:-translate-y-2 transition">
+                    <i class="fas fa-car-side text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-2xl font-black mb-1">SEDAN</h4>
+                    <p class="text-slate-400 text-xs mb-6 uppercase tracking-widest font-bold">Etios, Dzire, Amaze</p>
+                    <div class="space-y-4 text-slate-700 font-medium">
+                        <div class="flex justify-between border-b pb-2"><span>One Way</span><span class="font-black text-blue-600">₹14/KM</span></div>
+                        <div class="flex justify-between border-b pb-2"><span>Round Trip</span><span>₹12/KM</span></div>
+                        <div class="flex justify-between"><span>Driver Bata</span><span>₹400</span></div>
+                    </div>
                 </div>
-                <div class="bg-gray-50 p-4 rounded">
-                    <strong>Round Trip</strong>
-                    <ul class="mt-2 space-y-1 text-gray-700">
-                        <li>• Minimum 250 Kms / Day</li>
-                        <li>• Driver Charge: ₹500 / Day</li>
-                    </ul>
+
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-b-8 border-blue-600 hover:-translate-y-2 transition">
+                    <i class="fas fa-shuttle-van text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-2xl font-black mb-1">SUV/MUV</h4>
+                    <p class="text-slate-400 text-xs mb-6 uppercase tracking-widest font-bold">Ertiga, Xylo, Marazzo</p>
+                    <div class="space-y-4 text-slate-700 font-medium">
+                        <div class="flex justify-between border-b pb-2"><span>One Way</span><span class="font-black text-blue-600">₹18/KM</span></div>
+                        <div class="flex justify-between border-b pb-2"><span>Round Trip</span><span>₹16/KM</span></div>
+                        <div class="flex justify-between"><span>Driver Bata</span><span>₹400</span></div>
+                    </div>
                 </div>
-                <div class="bg-gray-50 p-4 rounded">
-                    <strong>Additional</strong>
-                    <ul class="mt-2 space-y-1 text-gray-700">
-                        <li>• Waiting: ₹150 / Hour</li>
-                        <li>• Hill Station: ₹300 - ₹500</li>
-                    </ul>
-                </div>
-                <div class="bg-gray-50 p-4 rounded">
-                    <strong>Contact</strong>
-                    <ul class="mt-2 space-y-1 text-gray-700">
-                        <li>• Call: +91 888 33 48403</li>
-                        <li>• WhatsApp: Available</li>
-                    </ul>
+
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-b-8 border-slate-900 hover:-translate-y-2 transition">
+                    <i class="fas fa-car-rear text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-2xl font-black mb-1">PREMIUM</h4>
+                    <p class="text-slate-400 text-xs mb-6 uppercase tracking-widest font-bold">Innova Crysta</p>
+                    <div class="space-y-4 text-slate-700 font-medium">
+                        <div class="flex justify-between border-b pb-2"><span>One Way</span><span class="font-black text-blue-600">₹19/KM</span></div>
+                        <div class="flex justify-between border-b pb-2"><span>Round Trip</span><span>₹16/KM</span></div>
+                        <div class="flex justify-between"><span>Driver Bata</span><span>₹400</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Floating Buttons (iPhone-friendly) -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
-        <a href="tel:+918883348403" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center justify-center w-14 h-14" title="Call us">
-            <i class="fas fa-phone icon"></i>
+        <a href="tel:+918883348403" class="bg-slate-900 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center floating-btn border-2 border-white">
+            <i class="fas fa-phone text-2xl"></i>
         </a>
-        <a href="https://wa.me/918883348403" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition flex items-center justify-center w-14 h-14" title="WhatsApp us">
-            <i class="fab fa-whatsapp icon"></i>
+        <a href="https://wa.me/918883348403" class="bg-green-500 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center floating-btn border-2 border-white">
+            <i class="fab fa-whatsapp text-3xl"></i>
         </a>
     </div>
 
+    <script>
+        function switchTab(type) {
+            const oneWayBtn = document.getElementById('oneWayBtn');
+            const roundTripBtn = document.getElementById('roundTripBtn');
+            const dateField = document.getElementById('dateField');
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (type === 'oneway') {
+                oneWayBtn.className = "flex-1 pb-4 text-sm font-black uppercase tracking-widest active-tab";
+                roundTripBtn.className = "flex-1 pb-4 text-sm font-black uppercase tracking-widest inactive-tab";
+                dateField.classList.add('hidden');
+                submitBtn.innerText = "Calculate One Way Quote";
+            } else {
+                roundTripBtn.className = "flex-1 pb-4 text-sm font-black uppercase tracking-widest active-tab";
+                oneWayBtn.className = "flex-1 pb-4 text-sm font-black uppercase tracking-widest inactive-tab";
+                dateField.classList.remove('hidden');
+                submitBtn.innerText = "Calculate Round Trip Quote";
+            }
+        }
+    </script>
 </body>
 </html>
